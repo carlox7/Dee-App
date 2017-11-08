@@ -5,6 +5,15 @@
   "repository": "https://github.com/carlox7/Dee-App.git",
   "author": "Carlo Santos <carlox7@gmail.com>",
   "license": "MIT",
+  "scripts": {
+  "lint": "eslint ./**",
+  "start": "node server.js",
+  "start-debug": "DEBUG='slug*' npm start",
+  "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha",
+  "test-debug": "DEBUG='slug*' ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha",
+  "test-local": "mocha",
+  "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+},
   "dependencies": {
     "bcrypt": "^1.0.3",
     "bluebird": "^3.5.1",

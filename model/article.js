@@ -8,4 +8,4 @@ const articleSchema = mongoose.Schema({
   created: {type: Date, default: Date.now},
 });
 
-module.exports = mongoose.model('pet', articleSchema);
+module.exports = mongoose.model('article', articleSchema);
